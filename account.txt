@@ -1,0 +1,3 @@
+Account db: 
+1. username: admin, pw: admin, email: admin@admin.com, q: "Qual è il nome del tuo primo animale domestico?", a: "Pippo"
+2. username: player1, pw: 123456, email: player1@player.com, q: "In quale città sei nato?", a: "Roma"

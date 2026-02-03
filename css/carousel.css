@@ -1,0 +1,324 @@
+.carouselContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+}
+
+.arrowBtn{
+    background: none;
+    border: none; 
+    color: yellow;
+    font-size: 40px;
+    cursor:pointer;
+    text-shadow: 2px 2px 0 rgb(220, 176, 19);
+    padding: 10px;
+    transition: transform 0.1s;
+    user-select: none;
+}
+
+.arrowBtn:hover{
+    transform: scale(1.2);
+    color: #ec0202
+}
+
+.homeBtn{
+    position: absolute; 
+    top: 30px; 
+    right: 30px; 
+    left: auto; 
+    z-index: 10; 
+}
+
+.homeBtn:hover {
+    transform: scale(1.1); 
+}
+
+.homeBtn:active {
+    transform: scale(0.9); 
+}
+
+/*CARTE PER OGNI ITEM*/
+.card{
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+
+    height: 500px;
+    width: 100%; 
+    padding: 10px;
+
+    position: relative;
+    
+    animation: fadeIn 0.4s ease-in-out;
+    box-sizing: border-box;
+}
+
+.card.active{
+    display: flex;
+}
+
+.card h3{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.pixelImage{
+    height: 150px; 
+    width: auto; 
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.priceTag {
+    color: #ffcc00;
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 25px; 
+}
+
+/*BARRE STATISTICHE*/
+
+.statBox{
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    margin: 10px 0; 
+    text-align: left;
+    color:white;
+}
+
+.statRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 50px; 
+    width: 100%; 
+}
+
+.statRow span{
+    text-align: left; 
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 100px; 
+}
+
+/*contenitore barra*/
+.segmentBar{
+    display: flex;
+    gap: 4px; 
+    height: 20px;
+    width: 180px; 
+    flex-shrink: 0;
+}
+
+.segment{
+    flex: 1; 
+    height: 100%; 
+    border: 2px solid black; 
+    background-color: white;
+}
+
+.segment.filled{
+    background-color: rgb(5, 213, 5);
+    box-shadow: inset -2px -2px 0 rgba(0,0,0,0.5);
+}
+
+.segment.upgrade{
+    background-color: blue;
+    border-color: white;
+    box-shadow: inset -2px -2px 0 rgba(0,0,0,0.5);
+}
+
+
+.btnRow{
+    display: flex; 
+    justify-content: center;
+    gap: 15px; 
+    width: 100%;
+    margin-top: auto; 
+    padding-bottom: 10px; 
+}
+
+.talent{
+    margin-top: 10px; 
+    color: #ffcc00;
+    font-size: 14px; 
+}
+
+.emptyState{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px; 
+    text-align: center; 
+    margin-bottom: 50px;
+}
+
+.coinsDisplay{
+    position: absolute; 
+    top: 30px; 
+    left: 30px; 
+
+    font-size: 24px; 
+    color: gold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 100;
+}
+
+.coinsDisplay .icon {
+    width: 40px; /* Icona moneta più grande */
+    height: 40px;
+}
+
+.buyBtn{
+    color: white;
+    background-color: blue;
+    border-color: rgb(3, 3, 75);
+}
+
+.upgradePanel{
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    width: 100%;
+    padding: 10px;
+}
+
+.upgradeRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: beige;
+    color: black;
+    padding: 15px; 
+    border: 4px solid white; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.upgradeRow .icon {
+    width: 50px; 
+    height: 50px;
+    object-fit: contain;
+}
+
+.upgradeText {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.lvlPrice {
+    font-size: 12px;
+    color: gold;
+}
+
+.lvlPriceMax {
+    font-size: 12px;
+    color: red;
+    font-weight: bold;
+}
+
+.backBtn{
+    background-color: red;
+    text-shadow: 2px 2px 0 darkred;
+}
+    
+
+.footerAction {
+    position: fixed; 
+    bottom: 30px;
+    margin: 20px;
+    z-index: 1000;
+    width: auto;
+}
+
+/*SCHERMI PICCOLI*/
+
+@media only screen and (max-height: 740px){
+    .card {
+        height: 400px;
+    }
+
+    .pixelImage {
+        height: 100px; 
+        margin-bottom: 5px;
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+
+    .statRow {
+        margin-bottom: 5px;
+        font-size: 8px;
+    }
+
+    .segmentBar {
+        height: 15px;
+        width: 140px;
+    }
+
+    
+    .priceTag {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    
+    .talent {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    
+    .btnRow {
+        padding-bottom: 5px;
+    }
+
+    .coinsDisplay {
+        top: 10px;
+        left: 10px;
+        font-size: 16px;
+    }
+    
+    .homeBtn {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .coinsDisplay .icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .upgradePanel {
+        gap: 5px;
+    }
+    
+    .upgradeRow {
+        padding: 5px 10px;
+    }
+    
+    .upgradeRow .icon {
+        width: 35px;
+        height: 35px;
+    }
+}

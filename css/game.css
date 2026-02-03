@@ -1,0 +1,239 @@
+body{
+    overflow: hidden;
+    font-family: 'Press Start 2P', 'Arial', monospace;
+    margin: 0; 
+    padding: 0;
+    background-color: #1a1a1a;
+}
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('../fonts/Press_Start_2P/PressStart2P-Regular.ttf');
+}
+
+#gameArea{
+    position: relative; 
+    width: 60vw; 
+    height: 100vh; 
+    margin: 0 auto; 
+
+    background-image: url('../img/road.jpg');
+    background-repeat: repeat-y;
+    background-size: 100% 100%;
+
+    overflow: hidden;
+    border-left: 0.5vw solid red; 
+    border-right: 0.5vw solid red;
+    animation-play-state: paused;
+}
+
+.scrollingRoad{
+    animation: scrollRoad 3s linear infinite;
+}
+
+@keyframes scrollRoad {
+    from {background-position-y: 0;}
+    to {background-position-y: 100vh;}
+}
+
+#player{
+    position: absolute;
+    bottom: 3vh; 
+
+    width: 10vw; 
+    height: 16vw; 
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: left 0.1s ease-out;
+    z-index: 10;
+}
+
+.obstacle{
+    position: absolute; 
+    width: 5vw;
+    height: 5vw;
+    background-image: url('../img/bomb.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 15; 
+}
+
+#scoreDisplay{
+    position: absolute; 
+    top: 5vh; 
+    left: 2vw; 
+    max-width: 20vw;
+    color: white; 
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.2vw; 
+    z-index: 20; 
+    text-shadow: 2px 2px 0 #000; 
+    display: flex; 
+    flex-direction: column;
+    gap: 1vh;
+    white-space: nowrap;
+}
+
+.btnCol {
+    position: absolute;
+    top: 5vh;
+    margin-top: 20px; 
+    right: 2vw;
+    max-width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 100; 
+}
+
+#gameOverDialog {
+    border: none; 
+    padding: 0; 
+    background: transparent;
+    overflow: visible;
+
+    position: fixed;
+    inset: 0; 
+    margin: auto;
+}
+
+#gameOverDialog[open] {
+    display: block;
+}
+
+#gameOverDialog p{
+    font-size: 18px;
+}
+
+#gameOverDialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(2px);
+}
+
+#gameOverDialog.fallback-open {
+    display: flex; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); 
+    z-index: 2000;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modalContent {
+    background-color: #1a1a1a;
+    color: white; 
+    border: 4px solid red;
+    padding: 30px; 
+    text-align: center;
+    border-radius: 10px; 
+    max-width: 500px; 
+    width: 90%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 20px black;
+}
+
+.gameOverText{
+    color: red;
+    text-shadow: 2px 2px 0 black;
+}
+
+#finalScore {
+    color: lightskyblue;
+    text-shadow: 2px 2px 0 black;
+}
+
+#coinsEarned{
+    color:gold;
+    text-shadow: 2px 2px 0 black;
+}
+
+.new-record {
+    color: #39ff14; 
+    font-size: 24px;
+    margin-top: -10px; 
+    animation: blink 0.5s infinite alternate;
+    display: none; 
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0.5; }
+}
+
+.backBtn{
+    background-color: red;
+    text-shadow: 2px 2px 0 darkred;
+}
+
+.retryBtn{ 
+    background-color: green;
+    text-shadow: 2px 2px 0 darkgreen;
+}
+
+#countdownDisplay{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 80px; 
+    color: yellow;
+    text-shadow: 4px 4px 0 black;
+    z-index: 100;
+    pointer-events: auto; 
+}
+
+#livesVal{
+    color: red; 
+    white-space: nowrap;
+}
+
+.driverInfo{
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+.driverBonus{
+    color:#39ff14;
+    text-shadow: 2px 2px 0 black;
+}
+.pauseBtn{
+    background-color: yellow;
+    text-shadow: 2px 2px 0 #ffd000;
+}
+
+@media only screen and (max-height: 740px) {
+    #gameArea {
+        width: 45vw; 
+    }
+    
+    #scoreDisplay, .btnCol {
+        top: 3vh; 
+    }
+
+    #countdownDisplay {
+        font-size: 50px;
+    }
+    
+    #player {
+        bottom: 1vh;
+    }
+}
