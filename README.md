@@ -72,10 +72,10 @@ $dbname = "f1_runner";
 ### 2. Home page/Dashboard: 
 <img width="1920" height="1140" alt="Screenshot 2026-02-03 201134" src="https://github.com/user-attachments/assets/bb9f6a37-2ec1-4ac0-94fd-fbb0ef85590f" />
 
-### 3. Shop:
+### 3. Garage:
 <img width="1920" height="1140" alt="Screenshot 2026-02-03 201219" src="https://github.com/user-attachments/assets/dd96124a-b9a9-468a-af9d-f3b1b536c664" />
 
-### 4. Garage:
+### 4. Shop:
 <img width="1920" height="1140" alt="Screenshot 2026-02-03 201150" src="https://github.com/user-attachments/assets/2011c08c-cbb3-4d13-b838-9d2745151d57" />
 
 ### 5. Upgrade: 
