@@ -1,8 +1,9 @@
 # 🏎️ F1 Runner - Web Browser Game
-
+![Project Date](https://img.shields.io/badge/date-February%203%2C%202026-orange)
 ![Project Status](https://img.shields.io/badge/status-completed-brightgreen)
 ![Tech Stack](https://img.shields.io/badge/php-mysql-blue)
 ![Tech Stack](https://img.shields.io/badge/javascript-vanilla-yellow)
+![Course](https://img.shields.io/badge/course-Web%20Programming-purple)
 
 **F1 Runner** is a vertical scrolling endless runner game developed as a final project for the **Web Programming** course at University.
 The project combines a dynamic **Vanilla JavaScript** frontend with a robust **PHP/MySQL** backend to handle user sessions, score persistence, and game logic security.
@@ -84,4 +85,4 @@ $dbname = "f1_runner";
 <img width="1920" height="1140" alt="Screenshot 2026-02-03 201249" src="https://github.com/user-attachments/assets/91a1e79e-66cd-4d63-a760-db6a4b958fff" />
 
 ## 👤 Author
-Developed by **dlcbeatrix**. Computer Engineering Student.
+Developed by **dlcbeatrix**, *Computer Engineering Student*.
