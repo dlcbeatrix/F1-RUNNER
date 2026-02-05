@@ -37,10 +37,10 @@ This isn't just a game; it's a full-stack web application. Key engineering featu
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** HTML5, CSS3 (Animations), JavaScript (ES6+).
-* **Backend:** PHP (7.4+).
-* **Database:** MySQL / MariaDB.
-* **Server:** Apache (XAMPP/WAMP environment).
+* **Frontend:** ![HTML5](https://img.shields.io/badge/HTML5-orange?style=flat&logo=html5&logoColor=white), ![CSS](https://img.shields.io/badge/CSS3(Animations)-blue?style=flat&logo=css&logoColor=white), ![JavaScript (ES6+)](https://img.shields.io/badge/JavaScript(ES6+)-yellow?style=flat&logo=javascript&logoColor=white).
+* **Backend:** ![PHP (7.4+)](https://img.shields.io/badge/PHP(7.4+)-blue?style=flat&logo=php&logoColor=white) 
+* **Database:** ![MySQL / MariaDB](https://img.shields.io/badge/MySQL-darkblue?style=flat&logo=mysql&logoColor=white) .
+* **Server:** ![Apache](https://img.shields.io/badge/Apache-magenta?style=flat&logo=apache&logoColor=white) (XAMPP/WAMP environment).
 
 ---
 
