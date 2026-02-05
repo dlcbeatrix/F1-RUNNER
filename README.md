@@ -52,7 +52,7 @@ Download the project files into your server's root directory (e.g., `htdocs` for
 
 ### 2. Database Setup
 1.  Open **phpMyAdmin** (or your SQL client).
-2.  Create a new database named `f1_runner_db`.
+2.  Create a new database named `f1_runner`.
 3.  Import the `f1_runner.sql` file provided in the db folder of this repository.
 
 ### 3. Configuration
