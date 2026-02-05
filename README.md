@@ -56,13 +56,13 @@ Download the project files into your server's root directory (e.g., `htdocs` for
 3.  Import the `f1_runner.sql` file provided in the db folder of this repository.
 
 ### 3. Configuration
-Open `api/connessione.php` (or `db.php`) and configure your database credentials if necessary:
+Open `api/connessione.php` and configure your database credentials if necessary:
 
 ```php
 $host = "localhost";
 $username = "root";
 $password = ""; // Your DB password (usually empty on XAMPP)
-$dbname = "f1_runner_db";
+$dbname = "f1_runner";
 ```
 ## 🖼️ Screenshots 
 ### 1. Login/Sign up: 
